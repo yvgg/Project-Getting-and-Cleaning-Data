@@ -11,7 +11,23 @@ The final goal of this project is obtain a tidy data from a rar source of data b
 
 All these steps are done by script run_analysis.R. Next, I am going to explain some details by steps.
 
+1. Merges the training and the test sets to create one data set.
+In this first part, I have read train and test data and add subject and activity. For this porpouse I have used read.table, cbind and rbind.
+The dimension of final data is 10290 by 563. Extracts only the measurements on the mean and standard deviation for each measurement. 
 
+2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+For the next part I have obtain the features and using grep function look for features with mean and std in their names, which are the measurement  that we are interested in. The dimension after that is  10299 by 81.
+
+3. Uses descriptive activity names to name the activities in the data set
+As the name of variable are a little bit confuse and using the text file that describes variable, I have changed tha names of the variables. For example, t is named Time, f FrequencyDomain, Acc Accelerometer, Gyro Gyrocospe and so on.
+
+4. Appropriately labels the data set with descriptive variable names. 
+Using the label of the previous step and the function name I have obtained the label for data.
+
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+For this last step I have used dplyr library and function group_by and summarise_each to obtain the average of each variable for each activity and each subject.
+
+The code is written next
 ```
 # Merges the training and the test sets to create one data set
 X_train <- read.table('./train/X_train.txt')
