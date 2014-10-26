@@ -1,0 +1,11 @@
+I have changed some parts of the labels applying these rules.
+
+'t' is transformed into 'Time'.
+'f' is transformed into FrequencyDomain
+'-' in '.'
+'Acc' is transformed into 'Accelerometer'
+'Gyro' is transformed into 'Gyroscope'
+'Mag' is transformed into 'Magnitude:EuclideanNorm'
+'sma' is transformed into 'Gyroscope'
+'Mag' is transformed into 'SignalMagnitudeArea'
+'iqr' is transformed into 'InterquatileRange'
